@@ -3,12 +3,14 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './store';
 import DevTools from './DevTools';
+import {Router, hashHistory} from 'react-router';
+import routes from './routes';
 import { getCountries } from './actions/actions-countries';
 
 render (
     <Provider store={store}>
         <div>
-            <h1>Initializing project</h1>
+            <Router history={hashHistory} routes={routes} />
             <DevTools />
         </div>
     </Provider>,
