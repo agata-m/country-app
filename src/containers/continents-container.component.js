@@ -27,7 +27,7 @@ class ContinentsContainer extends Component {
                     <option value='Europe'>Europe</option>
                     <option value='Africa'>Africa</option>
                 </select>
-                <CountryFlagList countries={this.props.visibileCountries} deleteCountry={this.deleteCountry.bind(this)} />
+                <CountryFlagList countries={this.props.visibleCountries} deleteCountry={this.deleteCountry.bind(this)} />
             </div>
         )
     }
@@ -35,7 +35,7 @@ class ContinentsContainer extends Component {
 
 const mapStateToProps = function (store) {
     return {
-        visibleCountries: store.countriesReducer.visibileCountries
+        visibleCountries: store.countriesReducer.visibleCountries
     };
 };
 
